@@ -1,0 +1,1 @@
+export const IMAGE_URL = 'http://www.jj12123.com';
