@@ -22,7 +22,7 @@ export const getVisibleTodos = createSelector(
 )
 
 
-export const getCompletedTodoCount = creactSelector(
+export const getCompletedTodoCount = createSelector(
     [getTodos],
     todos => (
         todos.reduce((count,todo) =>

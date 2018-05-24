@@ -2,16 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
-export default class TodoTextInput extends React.Component{
-    static propTypes = {
-        onSave: PropTypes.func.isRequired,
-        text: PropTypes.string,
-        placeholder: PropTypes.string,
-        editing: PropTypes.bool,
-        newTodo: PropTypes.bool
-    }
+class TodoTextInput extends React.Component{
 
-    static = {
+    state = {
         text: this.props.text || ''
     }
 
@@ -44,7 +37,7 @@ export default class TodoTextInput extends React.Component{
                     'new-todo': this.props.newTodo
                 })
             }
-            placeholder={this.porps.placeholder}
+            placeholder={this.props.placeholder}
             autoFocus='true'
             value={this.state.text}
             onBlur={this.handleBlur}
@@ -53,3 +46,13 @@ export default class TodoTextInput extends React.Component{
         )
     }
 }
+
+TodoTextInput.propTypes = {
+    onSave: PropTypes.func.isRequired,
+    text: PropTypes.string,
+    placeholder: PropTypes.string,
+    editing: PropTypes.bool,
+    newTodo: PropTypes.bool
+}
+
+export default TodoTextInput

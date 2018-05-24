@@ -3,13 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import TodoTextInput from './TodoTextInput'
 
-export default class TodoItem extends Component{
-    static propTypes = {
-        todo: PropTypes.object.isRequired,
-        editTodo: PropTypes.func.isRequired,
-        deleteTodo: PropTypes.func.isRequired,
-        completeTodo: PropTypes.func.isRequired
-    }
+class TodoItem extends React.Component{
 
     state = {
         editing: false
@@ -63,3 +57,11 @@ export default class TodoItem extends Component{
     }
 }
 
+TodoItem.propTypes = {
+    todo: PropTypes.object.isRequired,
+    editTodo: PropTypes.func.isRequired,
+    deleteTodo: PropTypes.func.isRequired,
+    completeTodo: PropTypes.func.isRequired
+}
+
+export default TodoItem

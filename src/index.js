@@ -4,6 +4,12 @@ import {MessageQuery} from './view/MessageQuery';
 import {BusinessProcessing} from './view/BusinessProcessing';
 import {InteractionPolicePeople} from './view/InteractionPolicePeople';
 
+import {createStore} from 'redux'
+import { Provider } from 'react-redux'
+import TodoApp from './components/TodoApp'
+import reducer from './reducers'
+import 'todomvc-app-css/index.css'
+const store = createStore(reducer)
 
 class App extends React.Component{
     constructor(props){
@@ -22,8 +28,16 @@ class App extends React.Component{
 }
 
 
+// ReactDOM.render(
+//      <App />,
+//   document.getElementById('root')
+// );
+
+
 ReactDOM.render(
-     <App />,
+     <Provider store={store}>
+         <TodoApp />
+     </Provider>,
   document.getElementById('root')
 );
 
