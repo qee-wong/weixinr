@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Footer from './Footer'
 import VisibleTodoList from '../containers/VisibleTodoList'
+import { Link } from 'react-router-dom'
+
 
 const MainSection = ({todosCount,completedCount,actions}) =>(
     <section className='main'>
@@ -15,6 +17,9 @@ const MainSection = ({todosCount,completedCount,actions}) =>(
                 <label onClick={actions.completeAllTodos} />
             </span>
         }
+         
+            <Link to='/weixinr' >weixinr</Link>
+         
         <VisibleTodoList />
         {
             !!todosCount && 
@@ -24,6 +29,8 @@ const MainSection = ({todosCount,completedCount,actions}) =>(
             onClearCompleted = {actions.clearCompleted}
             />
         }
+        
+        
     </section>
 )
 

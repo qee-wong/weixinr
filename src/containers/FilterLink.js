@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { setVisibilityFilter } from '../actions'
+import { setVisibilityFilter ,donetworkrequest } from '../actions'
 import Link from '../components/Link'
 
 const mapStateToProps = (state,ownProps) => ({
@@ -9,6 +9,9 @@ const mapStateToProps = (state,ownProps) => ({
 const mapDispatchToProps = (dispatch,ownProps) =>({
     setFilter: () => {
         dispatch(setVisibilityFilter(ownProps.filter))
+    },
+    donetworkrequest: () =>{
+        dispatch(donetworkrequest(ownProps.filter))
     }
 })
 
