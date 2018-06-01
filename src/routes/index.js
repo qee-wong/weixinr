@@ -11,14 +11,14 @@ import Shiguduofa from '../components/Shiguduofa'
 
 const Root = ({store}) => (
     <Provider store={store}>
-         <WeixinApp /> 
-        {/* <Router>
+        {/* <WeixinApp />  */}
+         <Router>
             <div>
-            <Route exact path='/weixinzh3.jspx' component={WeixinApp} />
+            <Route exact path='/' component={WeixinApp} />
             <Route exact path='/todo' component={TodoApp} />
             <Route exact path='/shiguduofa' component={Shiguduofa} />
             </div>
-        </Router> */}
+        </Router> 
     </Provider>
 )
 
