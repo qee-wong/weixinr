@@ -2,8 +2,8 @@ import { createSelector } from 'reselect'
 import { SHOW_ALL,SHOW_COMPLETED,SHOW_ACTIVE } from '../constants/TodoFilters'
 
 
-const getVisibilityFilter = state => state.visibilityFilter
-const getTodos = state => state.todos
+const getVisibilityFilter = (state) => state.visibilityFilter
+const getTodos = (state) => state.todos
 
 export const getVisibleTodos = createSelector(
     [getVisibilityFilter,getTodos],

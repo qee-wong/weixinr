@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
+import { NavLink } from 'react-router-dom'
 
-const Link = ({active ,children,setFilter,donetworkrequest}) =>
+const Link = ({active ,children,setFilter,donetworkrequest,filter}) =>
 (
     <div>
     <a className={classnames({selected: active})}
@@ -13,6 +14,13 @@ const Link = ({active ,children,setFilter,donetworkrequest}) =>
     </a>
     <a onClick={()=> donetworkrequest()}>donetworkrequest</a>
     </div>
+    // <NavLink 
+    //     to = {filter === 'SHOW_ALL' ? '/' : `/${ filter }`}
+    //     activeStyle={{
+    //         textDecoration: 'none',
+    //         color: 'black'
+    //     }}
+    // >{children}</NavLink>
 )
 
 Link.propTypes = {

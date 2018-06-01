@@ -5,7 +5,7 @@ import VisibleTodoList from '../containers/VisibleTodoList'
 import { Link } from 'react-router-dom'
 
 
-const MainSection = ({todosCount,completedCount,actions}) =>(
+const MainSection = ({todosCount,completedCount,actions,filter}) =>(
     <section className='main'>
         {
             !!todosCount &&
@@ -18,9 +18,14 @@ const MainSection = ({todosCount,completedCount,actions}) =>(
             </span>
         }
          
-            <Link to='/weixinr' >weixinr</Link>
+        <Link to='/weixinr' >weixinr</Link>|
+        <Link to='/shiguduofa' >shiguduofa</Link>|
+        <Link to='/todo/show_all' >{filter}_show_all|</Link>
+        
+        <Link to='/todo2/duofa' >shiguduofa</Link>|
+        
          
-        <VisibleTodoList />
+        <VisibleTodoList filter={filter || 'SHOW_ALL'} />
         {
             !!todosCount && 
             <Footer 

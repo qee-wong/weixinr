@@ -16,8 +16,8 @@ const ppi = [{icon:ic_ppi_sinse,text:'违法随手拍'},{icon:ic_ppi_security,te
 const GridPPI = (props) => {
     const openid = props.weixinId;
     const imageslist3 = [
-        {imgsrc:'./weixinimg/ic_ppi_sinse.png',url:`/sspxz.jspx?weixinId=${openid}`},
-        {imgsrc:'./weixinimg/ic_ppi_security.png',url:`/channelanquanQueryact.jspx?weixinId=${openid}`},
+        {imgsrc:'./weixinimg/ic_ppi_sinse.png?v='+Date.parse(new Date()),url:`/sspxz.jspx?weixinId=${openid}`},
+        {imgsrc:'./weixinimg/ic_ppi_security.png?v='+Date.parse(new Date()),url:`/channelanquanQueryact.jspx?weixinId=${openid}`},
     ];
     return (
   <div style={{ paddingTop: '48px',backgroundColor:'#fff'}}>
@@ -45,7 +45,7 @@ export class InteractionPolicePeople extends React.Component{
     render(){
         return (
             <div className='feeder'>
-                <img  src={IMAGE_URL+'./weixinimg/ic_ppi_float.png'}  alt="" style={{ width: '100%', verticalAlign: 'top' }}  /> 
+                <img  src={IMAGE_URL+'./weixinimg/ic_ppi_float.png?v='+Date.parse(new Date())}  alt="" style={{ width: '100%', verticalAlign: 'top' }}  /> 
                 <NoticeBar marqueeProps={{ loop: true, style: { padding: '0 7.5px' } }}>
                     牡丹江交警，竭诚为您服务！&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

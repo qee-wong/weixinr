@@ -21,20 +21,21 @@ const imageslist2 = [{icon:'./weixinimg/sgdfld.png',text:'事故多发路段'},{
 const GridExample = (props) =>{
   const openid = props.weixinId;
   const imageslist3 = [
-    {imgsrc:'./weixinimg/lkcx.png',url:`/roadcondpoi.jspx`},
-    {imgsrc:'./weixinimg/fjzd.png',url:`/policenearby.jspx?weixinId=${openid}`},
-    {imgsrc:'./weixinimg/cldacx.png',url:`/carArchives.jspx?weixinId=${openid}`},
-    {imgsrc:'./weixinimg/jsrdacx.png',url:`/driverArchives.jspx?weixinId=${openid}`},
+    {imgsrc:'./weixinimg/lkcx.png?v='+Date.parse(new Date()),url:`/roadcondpoi.jspx`},
+    {imgsrc:'./weixinimg/fjzd.png?v='+Date.parse(new Date()),url:`/policenearby.jspx?weixinId=${openid}`},
+    {imgsrc:'./weixinimg/cldacx.png?v='+Date.parse(new Date()),url:`/carArchives.jspx?weixinId=${openid}`},
+    {imgsrc:'./weixinimg/jsrdacx.png?v='+Date.parse(new Date()),url:`/driverArchives.jspx?weixinId=${openid}`},
     
   ];
 
   const imageslist4 = [
-    {imgsrc:'./weixinimg/sgdfld.png',text:'事故多发路段',url:`/shiguduofa.jspx`},
-    {imgsrc:'./weixinimg/ydld.png',text:'易堵路段',url:`/flowStatus.jspx`},
+    {imgsrc:'./weixinimg/sgdfld.png?v='+Date.parse(new Date()),text:'事故多发路段',url:`/shiguduofa.jspx`},
+    {imgsrc:'./weixinimg/ydld.png?v='+Date.parse(new Date()),text:'易堵路段',url:`/flowStatus.jspx`},
   ];
   // console.log(process.env.NODE_ENV);
   return (
   <div>
+    <WhiteSpace size="lg" style={{backgroundColor:'#fff'}} />
     <Grid data={imageslist3}  onClick={(el,index) => window.location.href=el.url} 
     columnNum={2} activeStyle={false} hasLine={false} itemStyle={{height:'100px'}}
      renderItem={dataItem => (
@@ -47,9 +48,12 @@ const GridExample = (props) =>{
     <WhiteSpace size="sm" style={{backgroundColor:'#fff'}} />
     <Grid data={imageslist4}  onClick={(el,index) => window.location.href=el.url} 
     columnNum={2} activeStyle={false} hasLine={false}
-     renderItem={dataItem => (
+     renderItem={(dataItem,index) => (
         <div style={{ paddingTop: '12.5px',borderRight:'1PX solid #ddd' }}>
-          <img src={IMAGE_URL+dataItem.imgsrc} style={{width:'30%'}} alt="" />
+          <img src={IMAGE_URL+dataItem.imgsrc} 
+           style={index==1 ? {width:'25%'} :{width:'30%'}} 
+           
+          alt="" />
           <div style={{ color: '#666', fontSize: '14px', marginTop: '12px' }}>
             <span>{dataItem.text}</span>
           </div>
@@ -66,7 +70,7 @@ export class MessageQuery extends React.Component{
       //console.log(this.props.weixinId);
         return (
             <div>
-                <img  src={IMAGE_URL+'./weixinimg/index.png'}  alt="" style={{ width: '100%', verticalAlign: 'top' }}  /> 
+                <img  src={IMAGE_URL+'./weixinimg/index.png?v='+Date.parse(new Date())}  alt="" style={{ width: '100%', verticalAlign: 'top' }}  /> 
                 <NoticeBar marqueeProps={{ loop: true, style: { padding: '0 7.5px' } }}>
                     牡丹江交警，竭诚为您服务！&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

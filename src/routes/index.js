@@ -6,16 +6,19 @@ import { Provider } from 'react-redux'
 import PropTypes from 'prop-types'
 import TodoApp from '../components/TodoApp'
 import WeixinApp from '../components/WeixinApp'
+import Shiguduofa from '../components/Shiguduofa'
 
 
 const Root = ({store}) => (
     <Provider store={store}>
-        <Router>
+         <WeixinApp /> 
+        {/* <Router>
             <div>
-            <Route exact path='/' component={TodoApp} />
-            <Route path='/weixinr' component={WeixinApp} />
+            <Route exact path='/weixinzh3.jspx' component={WeixinApp} />
+            <Route exact path='/todo' component={TodoApp} />
+            <Route exact path='/shiguduofa' component={Shiguduofa} />
             </div>
-        </Router>
+        </Router> */}
     </Provider>
 )
 

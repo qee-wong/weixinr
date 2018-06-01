@@ -7,7 +7,7 @@ module.exports = {
         app:'./src/index.js',
         //print:'./src/print.js'
     },
-    devtool:'inline-source-map',
+    //devtool:'inline-source-map',
     devServer:{
         contentBase:'./dist',
         historyApiFallback: true
@@ -23,7 +23,7 @@ module.exports = {
         filename:'[name].bundle.js',
         path:path.resolve(__dirname,'dist')
     },
-    mode:"development",
+    mode:"production",
     module:{
         rules:[
            {
