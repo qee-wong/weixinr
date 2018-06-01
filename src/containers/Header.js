@@ -12,7 +12,7 @@ export const Header = ({addTodo}) => (
                 addTodo(text)
             }
             }}
-            placeholder="test"
+            placeholder="test_dev"
             />
     </header>
 )
