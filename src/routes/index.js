@@ -10,12 +10,14 @@ import WeixinApp from '../components/WeixinApp'
 
 const Root = ({store}) => (
     <Provider store={store}>
-        <Router>
+        <WeixinApp />
+        {/* <Router>
             <div>
-            <Route exact path='/' component={TodoApp} />
-            <Route path='/weixinr' component={WeixinApp} />
+            <Route exact path='/' component={WeixinApp} />
+            <Route exact path='/todo' component={TodoApp} />
+            <Route exact path='/shiguduofa' component={Shiguduofa} />
             </div>
-        </Router>
+        </Router> */}
     </Provider>
 )
 
