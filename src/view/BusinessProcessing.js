@@ -17,10 +17,10 @@ const bsp = [ic_bsp_sinsepross,ic_bsp_acsearch,ic_bsp_guide,ic_bsp_point];
 const GridBSP =  (props) => {
     const openid = props.weixinId;
     const imageslist3 = [
-        {imgsrc:'./weixinimg/ic_bsp_sinsepross.png?v='+Date.parse(new Date()),url:`/vioQueryact.jspx?weixinId=${openid}`},
-        {imgsrc:'./weixinimg/ic_bsp_acsearch.png?v='+Date.parse(new Date()),url:`/accidentquery.jspx?weixinId=${openid}`},
-        {imgsrc:'./weixinimg/ic_bsp_guide.png?v='+Date.parse(new Date()),url:`/channelQueryact.jspx?weixinId=${openid}`},
-        {imgsrc:'./weixinimg/ic_bsp_point.png?v='+Date.parse(new Date()),url:`/roadcondpoilist.jspx?weixinId=${openid}`},
+        {imgsrc:'/weixinimg/ic_bsp_sinsepross.png?v='+Date.parse(new Date()),url:`/vioQueryact.jspx?weixinId=${openid}`},
+        {imgsrc:'/weixinimg/ic_bsp_acsearch.png?v='+Date.parse(new Date()),url:`/accidentquery.jspx?weixinId=${openid}`},
+        {imgsrc:'/weixinimg/ic_bsp_guide.png?v='+Date.parse(new Date()),url:`/channelQueryact.jspx?weixinId=${openid}`},
+        {imgsrc:'/weixinimg/ic_bsp_point.png?v='+Date.parse(new Date()),url:`/roadcondpoilist.jspx?weixinId=${openid}`},
         
     ];
     return (
@@ -43,7 +43,7 @@ export class BusinessProcessing extends React.Component{
     render(){
         return (
             <div className='feeder'>
-                <img  src={IMAGE_URL+'./weixinimg/ic_ppi_float2.png?v='+Date.parse(new Date())}  alt="" style={{ width: '100%', verticalAlign: 'top' }}  onTouchEnd={this.handleClick}/> 
+                <img  src={IMAGE_URL+'/weixinimg/ic_ppi_float2.png?v='+Date.parse(new Date())}  alt="" style={{ width: '100%', verticalAlign: 'top' }}  onTouchEnd={this.handleClick}/> 
                 <NoticeBar marqueeProps={{ loop: true, style: { padding: '0 7.5px' } }}>
                     牡丹江交警，竭诚为您服务！&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

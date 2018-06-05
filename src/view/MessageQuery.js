@@ -21,16 +21,16 @@ const imageslist2 = [{icon:'./weixinimg/sgdfld.png',text:'事故多发路段'},{
 const GridExample = (props) =>{
   const openid = props.weixinId;
   const imageslist3 = [
-    {imgsrc:'./weixinimg/lkcx.png?v='+Date.parse(new Date()),url:`/roadcondpoi.jspx`},
-    {imgsrc:'./weixinimg/fjzd.png?v='+Date.parse(new Date()),url:`/policenearby.jspx?weixinId=${openid}`},
-    {imgsrc:'./weixinimg/cldacx.png?v='+Date.parse(new Date()),url:`/carArchives.jspx?weixinId=${openid}`},
-    {imgsrc:'./weixinimg/jsrdacx.png?v='+Date.parse(new Date()),url:`/driverArchives.jspx?weixinId=${openid}`},
+    {imgsrc:'/weixinimg/lkcx.png?v='+Date.parse(new Date()),url:`/roadcondpoi.jspx`},
+    {imgsrc:'/weixinimg/fjzd.png?v='+Date.parse(new Date()),url:`/policenearby.jspx?weixinId=${openid}`},
+    // {imgsrc:'./weixinimg/cldacx.png?v='+Date.parse(new Date()),url:`/carArchives.jspx?weixinId=${openid}`},
+    // {imgsrc:'./weixinimg/jsrdacx.png?v='+Date.parse(new Date()),url:`/driverArchives.jspx?weixinId=${openid}`},
     
   ];
 
   const imageslist4 = [
-    {imgsrc:'./weixinimg/sgdfld.png?v='+Date.parse(new Date()),text:'事故多发路段',url:`/shiguduofa.jspx`},
-    {imgsrc:'./weixinimg/ydld.png?v='+Date.parse(new Date()),text:'易堵路段',url:`/flowStatus.jspx`},
+    {imgsrc:'/weixinimg/sgdfld.png?v='+Date.parse(new Date()),text:'事故多发路段',url:`/shiguduofa.jspx`},
+    {imgsrc:'/weixinimg/ydld.png?v='+Date.parse(new Date()),text:'易堵路段',url:`/flowStatus.jspx`},
   ];
   // console.log(process.env.NODE_ENV);
   return (
@@ -70,7 +70,7 @@ export class MessageQuery extends React.Component{
       //console.log(this.props.weixinId);
         return (
             <div>
-                <img  src={IMAGE_URL+'./weixinimg/index.png?v='+Date.parse(new Date())}  alt="" style={{ width: '100%', verticalAlign: 'top' }}  /> 
+                <img  src={IMAGE_URL+'/weixinimg/index.png?v='+Date.parse(new Date())}  alt="" style={{ width: '100%', verticalAlign: 'top' }}  /> 
                 <NoticeBar marqueeProps={{ loop: true, style: { padding: '0 7.5px' } }}>
                     牡丹江交警，竭诚为您服务！&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

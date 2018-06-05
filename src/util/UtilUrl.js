@@ -1,1 +1,1 @@
-export const IMAGE_URL = 'http://www.jj12123.com';
+export const IMAGE_URL = 'http://jj12123.com';
