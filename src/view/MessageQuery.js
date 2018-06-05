@@ -23,8 +23,8 @@ const GridExample = (props) =>{
   const imageslist3 = [
     {imgsrc:'./weixinimg/lkcx.png',url:`/roadcondpoi.jspx`},
     {imgsrc:'./weixinimg/fjzd.png',url:`/policenearby.jspx?weixinId=${openid}`},
-    {imgsrc:'./weixinimg/cldacx.png',url:`/carArchives.jspx?weixinId=${openid}`},
-    {imgsrc:'./weixinimg/jsrdacx.png',url:`/driverArchives.jspx?weixinId=${openid}`},
+    // {imgsrc:'./weixinimg/cldacx.png',url:`/carArchives.jspx?weixinId=${openid}`},
+    // {imgsrc:'./weixinimg/jsrdacx.png',url:`/driverArchives.jspx?weixinId=${openid}`},
     
   ];
 
