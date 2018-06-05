@@ -14,9 +14,9 @@ const Root = ({store}) => (
         {/* <WeixinApp />  */}
          <Router>
             <div>
-            <Route exact path='/' component={WeixinApp} />
-            <Route exact path='/todo' component={TodoApp} />
-            <Route exact path='/shiguduofa' component={Shiguduofa} />
+            {/* <Route exact path='/' component={WeixinApp} /> */}
+            <Route exact path='/' component={TodoApp} />
+            {/* <Route exact path='/shiguduofa' component={Shiguduofa} /> */}
             </div>
         </Router> 
     </Provider>
